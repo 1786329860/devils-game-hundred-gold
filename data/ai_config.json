@@ -1,0 +1,123 @@
+{
+  "Personalities": [
+    {
+      "Type": 0,
+      "DisplayName": "保守型",
+      "Weights": { "ExpectedWinRate": 0.20, "GoldExpectedValue": 0.08, "PiecePreservation": 0.20, "RiskSafety": 0.25, "GoldPressure": 0.05, "DisguiseValue": 0.05, "DiamondValue": 0.05, "PatternExploitation": 0.12 },
+      "EarlyProbeBias": 0.80,
+      "LargeRoundAggression": 0.45,
+      "KingAfterKilledMultiplier": 0.60,
+      "SecretUpgradeBias": 0.70,
+      "DrawSeekingBias": 0.35,
+      "CommonerUpsetBias": 0.80
+    },
+    {
+      "Type": 1,
+      "DisplayName": "激进型",
+      "Weights": { "ExpectedWinRate": 0.15, "GoldExpectedValue": 0.25, "PiecePreservation": 0.05, "RiskSafety": 0.05, "GoldPressure": 0.15, "DisguiseValue": 0.08, "DiamondValue": 0.15, "PatternExploitation": 0.12 },
+      "EarlyProbeBias": 0.20,
+      "LargeRoundAggression": 1.35,
+      "KingAfterKilledMultiplier": 1.00,
+      "SecretUpgradeBias": 0.85,
+      "DrawSeekingBias": 0.10,
+      "CommonerUpsetBias": 1.15
+    },
+    {
+      "Type": 2,
+      "DisplayName": "欺诈型",
+      "Weights": { "ExpectedWinRate": 0.12, "GoldExpectedValue": 0.12, "PiecePreservation": 0.08, "RiskSafety": 0.10, "GoldPressure": 0.10, "DisguiseValue": 0.25, "DiamondValue": 0.15, "PatternExploitation": 0.08 },
+      "EarlyProbeBias": 0.55,
+      "LargeRoundAggression": 0.90,
+      "KingAfterKilledMultiplier": 0.85,
+      "SecretUpgradeBias": 1.40,
+      "DrawSeekingBias": 0.80,
+      "CommonerUpsetBias": 1.35
+    },
+    {
+      "Type": 3,
+      "DisplayName": "套路型",
+      "Weights": { "ExpectedWinRate": 0.18, "GoldExpectedValue": 0.15, "PiecePreservation": 0.12, "RiskSafety": 0.15, "GoldPressure": 0.10, "DisguiseValue": 0.15, "DiamondValue": 0.10, "PatternExploitation": 0.05 },
+      "EarlyProbeBias": 0.50,
+      "LargeRoundAggression": 1.00,
+      "KingAfterKilledMultiplier": 0.80,
+      "SecretUpgradeBias": 1.10,
+      "DrawSeekingBias": 0.70,
+      "CommonerUpsetBias": 1.15
+    }
+  ],
+  "Difficulties": [
+    { "Tier": 0, "DisplayName": "入门", "UtilityNoise": 0.30, "DisguiseRateMultiplier": 0.30, "DiamondPrecision": 0.35, "ReadingThreshold": 0.70, "OpponentHistoryDepth": 2, "ComboExecutionProbability": 0.10, "DecisionDelayMinSeconds": 1.0, "DecisionDelayMaxSeconds": 2.0, "AllowSecretUpgrade": false },
+    { "Tier": 1, "DisplayName": "进阶", "UtilityNoise": 0.15, "DisguiseRateMultiplier": 0.70, "DiamondPrecision": 0.70, "ReadingThreshold": 0.50, "OpponentHistoryDepth": 4, "ComboExecutionProbability": 0.50, "DecisionDelayMinSeconds": 2.0, "DecisionDelayMaxSeconds": 4.0, "AllowSecretUpgrade": true },
+    { "Tier": 2, "DisplayName": "地狱", "UtilityNoise": 0.05, "DisguiseRateMultiplier": 1.00, "DiamondPrecision": 0.95, "ReadingThreshold": 0.35, "OpponentHistoryDepth": 2147483647, "ComboExecutionProbability": 0.90, "DecisionDelayMinSeconds": 3.0, "DecisionDelayMaxSeconds": 5.0, "AllowSecretUpgrade": true }
+  ],
+  "Profiles": [
+    { "Id": "Conservative_Beginner", "Personality": 0, "Difficulty": 0 },
+    { "Id": "Conservative_Intermediate", "Personality": 0, "Difficulty": 1 },
+    { "Id": "Conservative_Hell", "Personality": 0, "Difficulty": 2 },
+    { "Id": "Aggressive_Beginner", "Personality": 1, "Difficulty": 0 },
+    { "Id": "Aggressive_Intermediate", "Personality": 1, "Difficulty": 1 },
+    { "Id": "Aggressive_Hell", "Personality": 1, "Difficulty": 2 },
+    { "Id": "Deceptive_Beginner", "Personality": 2, "Difficulty": 0 },
+    { "Id": "Deceptive_Intermediate", "Personality": 2, "Difficulty": 1 },
+    { "Id": "Deceptive_Hell", "Personality": 2, "Difficulty": 2 },
+    { "Id": "Tactical_Beginner", "Personality": 3, "Difficulty": 0 },
+    { "Id": "Tactical_Intermediate", "Personality": 3, "Difficulty": 1 },
+    { "Id": "Tactical_Hell", "Personality": 3, "Difficulty": 2 }
+  ],
+  "Playbooks": [
+    {
+      "Id": 1,
+      "DisplayName": "平民钓鱼",
+      "Steps": [
+        { "PreferredPiece": 1, "PreferredDisplayName": 4, "PreferredUpgrade": 0, "AnyDisplayName": false, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 },
+        { "PreferredPiece": 0, "PreferredDisplayName": 1, "PreferredUpgrade": 0, "AnyDisplayName": true, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 }
+      ]
+    },
+    {
+      "Id": 2,
+      "DisplayName": "欺诈耗牌流",
+      "Steps": [
+        { "PreferredPiece": 1, "PreferredDisplayName": 4, "PreferredUpgrade": 0, "AnyDisplayName": false, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 },
+        { "PreferredPiece": 3, "PreferredDisplayName": 0, "PreferredUpgrade": 0, "AnyDisplayName": false, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 }
+      ]
+    },
+    {
+      "Id": 3,
+      "DisplayName": "钻石骗招",
+      "Steps": [
+        { "PreferredPiece": 2, "PreferredDisplayName": 4, "PreferredUpgrade": 0, "AnyDisplayName": false, "AnyUpgrade": false, "MatchBonus": 0.18, "MissPenalty": -0.025 },
+        { "PreferredPiece": 3, "PreferredDisplayName": 0, "PreferredUpgrade": 2, "AnyDisplayName": true, "AnyUpgrade": false, "MatchBonus": 0.18, "MissPenalty": -0.025 }
+      ]
+    },
+    {
+      "Id": 4,
+      "DisplayName": "将军突击",
+      "Steps": [
+        { "PreferredPiece": 2, "PreferredDisplayName": 3, "PreferredUpgrade": 0, "AnyDisplayName": false, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 },
+        { "PreferredPiece": 3, "PreferredDisplayName": 3, "PreferredUpgrade": 0, "AnyDisplayName": true, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 }
+      ]
+    },
+    {
+      "Id": 5,
+      "DisplayName": "残局收割",
+      "Steps": [
+        { "PreferredPiece": 1, "PreferredDisplayName": 1, "PreferredUpgrade": 0, "AnyDisplayName": true, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 },
+        { "PreferredPiece": 3, "PreferredDisplayName": 3, "PreferredUpgrade": 0, "AnyDisplayName": true, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 },
+        { "PreferredPiece": 4, "PreferredDisplayName": 4, "PreferredUpgrade": 1, "AnyDisplayName": true, "AnyUpgrade": true, "MatchBonus": 0.18, "MissPenalty": -0.025 }
+      ]
+    }
+  ],
+  "Tuning": {
+    "LargeRoundGold": 30,
+    "CommonerEvaluationMinGold": 20,
+    "MaxRoundGold": 45.0,
+    "DrawUtility": 0.30,
+    "OpenUpgradeInformationPenalty": 0.12,
+    "SecretUpgradeWastePenalty": 0.20,
+    "LargeDrawPenaltyRisk": 0.22,
+    "GeneralDrawBanRisk": 0.30,
+    "ReadingReliability": 0.70,
+    "DecisionBudgetMilliseconds": 500,
+    "PieceValues": [0.50, 0.25, 0.55, 0.70, 0.85]
+  }
+}

@@ -1,0 +1,16 @@
+services:
+  devils-game-server:
+    build: .
+    container_name: devils-game-server
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8765:8765"
+    environment:
+      DATABASE_PATH: /data/devils_game.db
+    volumes:
+      - ./data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"

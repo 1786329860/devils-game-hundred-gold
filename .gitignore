@@ -1,0 +1,8 @@
+.godot/
+qa/*.png
+build/DevilsGame.exe
+build/DevilsGame.pck
+release/*.zip
+__pycache__/
+ui-test.log
+

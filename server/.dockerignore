@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+test_*.py
+e2e_test.py
+cleanup_test_data.py
+data/
+deploy/
